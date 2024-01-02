@@ -1,0 +1,2 @@
+-- 코드를 입력하세요
+SELECT USER_ID,NICKNAME,sum(price) as TOTAL_SALES from USED_GOODS_BOARD,USED_GOODS_USER where USED_GOODS_USER.user_id = USED_GOODS_BOARD.writer_id and status = 'DONE' group by writer_id having total_sales >= 700000 order by total_sales;
